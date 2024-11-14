@@ -37,7 +37,7 @@ Some minor adjustments were made by Mr. Connors.
                 const time = i / sampleRate;
                 // Calculate the sawtooth wave value with exponential growth
                 const phase = (time * frequency) % 1; // Phase ranges from 0 to 1
-                const exponentialValue = amplitude * (Math.exp(-5 * phase)); // Exponential segment
+                const exponentialValue = amplitude * (Math.exp(5 * phase)); // Exponential segment
                 const noise = (Math.random() - 0.5) * 2 * noiseFactor; // Random noise
                 const signal = exponentialValue + noise;
                 data.push([time.toFixed(6), signal.toFixed(6)]);
